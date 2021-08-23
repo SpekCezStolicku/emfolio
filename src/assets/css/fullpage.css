@@ -1,0 +1,50 @@
+div.fp-controlArrow.fp-next {
+    width: 40px;
+    height: 40px;
+    border: 3px solid burlywood;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(-45deg);
+    left: auto;
+    right: 70px;
+}
+div.fp-controlArrow.fp-prev {
+    width: 40px;
+    height: 40px;
+    border: 3px solid burlywood;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(-225deg);
+    left: 25px;
+}
+
+div.fp-controlArrow.fp-next:hover {
+    animation: skewNext 0.8s infinite;
+    animation-direction: alternate;
+}
+div.fp-controlArrow.fp-prev:hover {
+    animation: skewPrev 0.8s infinite;
+    animation-direction: alternate;
+}
+@keyframes skewNext {
+    0% {
+        transform: rotate(-45deg) scale(1);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1.2);
+    }
+}
+@keyframes skewPrev {
+    0% {
+        transform: rotate(-225deg) scale(1);
+    }
+    100% {
+        transform: rotate(-225deg) scale(1.2);
+    }
+}
+.fp-viewing-slide2 #fromLeft {
+    left: 0;
+    position:relative;
+    transition: all 1s ease-in-out;
+    transition-delay: .2s;
+}

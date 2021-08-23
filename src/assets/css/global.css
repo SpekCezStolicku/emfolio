@@ -1,0 +1,68 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    transition: all .5s ease;
+}
+html {
+    scroll-behavior: smooth;
+}
+p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.4em;
+}
+h3 {
+    color: snow;
+    font-size: 2em;
+}
+.title {
+    font-size: 3em;
+}
+.burlywood {
+    color: burlywood;
+}
+
+.viewContainer {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    max-height: 100vh;
+    max-width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.border {
+    border: solid yellow;
+}
+.sectionTitle {
+    text-transform: uppercase;
+    position: relative;
+    left: -87.5vh;
+    bottom: -32vh;
+    font-size: 23vh;
+    color: #aaa;
+    font-weight: bold;
+    transform: rotate(-90deg);
+}
+.cont {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    justify-content: center;
+}
+.d-block {
+    display: block;
+    margin: auto;
+}
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+.subtitle {
+    font-size: 2em;
+}
+.underline-dots {
+    text-decoration: underline dotted burlywood;
+}

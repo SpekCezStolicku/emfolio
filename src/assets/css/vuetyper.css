@@ -1,0 +1,11 @@
+.vueTyper {
+    font-size: 1.4em;
+    font-family: 'Roboto Mono', monospace;
+}
+.vue-typer .custom.char {
+    color: snow;
+}
+.vue-typer .custom.caret {
+    background-color: white;
+    width: 3px;
+}

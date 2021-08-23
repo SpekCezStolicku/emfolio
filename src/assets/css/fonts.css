@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Geogrotesque Stencil B Bd";
+    src: local("Geogrotesque Stencil B Bd"),
+    url("../../../src/assets/fonts/GeogrotesqueStencilB-Bd.ttf") format("truetype");
+}
+@font-face {
+    font-family: "mr robot";
+    src: local("mr robot"),
+    url("../../../src/assets/fonts/MR ROBOT.ttf") format("truetype");
+}
