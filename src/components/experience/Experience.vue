@@ -1,7 +1,7 @@
 <template>
-  <div class="viewContainer color">
-    <div class="d-block full-width">
-      <h1 class="title">Experiences</h1>
+  <div class="flex-container background-color">
+    <div class="inner-container full-width">
+      <h3 class="title">Experiences</h3>
       <Graphic></Graphic>
     </div>
   </div>
@@ -13,13 +13,13 @@ export default {
   name: "Experience",
   components: {
     Graphic,
-  }
+  },
 };
 </script>
 
 <style scoped>
-.color {
-  background-image: linear-gradient(to top, burlywood, #1f3828);
+.background-color {
+  background: #6b4422;
   color: white;
 }
 </style>

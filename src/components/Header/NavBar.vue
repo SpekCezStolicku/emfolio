@@ -19,7 +19,7 @@ import gsap from "gsap";
 export default {
   name: "NavBar",
   computed: {
-    ...mapState(["anchors"])
+    ...mapState(["anchors"]),
   },
   mounted() {
     gsap.from(".gsapAnime", {
@@ -33,22 +33,22 @@ export default {
   },
   methods: {
     countIndex(val) {
-      return val + 1
+      return val + 1;
     },
     animeNav() {
       gsap.fromTo(
         ".navBanner",
         {
           duration: 1,
-          y: -100
+          y: -100,
         },
         {
           duration: 1,
-          delay: .5,
+          delay: 0.5,
           y: 0,
         }
       );
-    }
+    },
   },
 };
 </script>
@@ -63,23 +63,14 @@ a {
   font-size: 1.2em;
   padding: 0.5em;
   text-decoration: none;
-  white-space: nowrap;
   z-index: 1002;
 }
-a:before {
+a:hover {
   content: attr(data-text);
-  position: absolute;
-  width: 0;
   color: burlywood;
   transition: all 0.4s linear;
 }
-a:hover:before {
-  position: relative;
-  z-index: 5000;
-  width: 100%;
-  left: 0;
-  color: burlywood;
-}
+
 .navBanner {
   position: fixed;
   height: 10%;

@@ -42,9 +42,14 @@ div.fp-controlArrow.fp-prev:hover {
         transform: rotate(-225deg) scale(1.2);
     }
 }
+
+/*AFTER LOAD AMINATIONS*/
 .fp-viewing-slide2 #fromLeft {
     left: 0;
     position:relative;
     transition: all 1s ease-in-out;
     transition-delay: .2s;
+}
+#fromLeft {
+    left: -130%;
 }

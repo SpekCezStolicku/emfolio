@@ -1,7 +1,7 @@
 <template>
-  <div class="viewContainer bg">
-    <div class="cont text">
-      <h2>programming skills</h2>
+  <div class="flex-container background-color">
+    <div class="inner-container">
+      <h3 class="title">programming skills</h3>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non
         risus ac leo posuere tincidunt non non massa. Nulla massa nibh,
@@ -21,18 +21,16 @@
             :name="icon"
           />
         </div>
-        <p>and who knows what else...</p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ProgressSkill from "@/components/skills/ProgressSkill";
 export default {
   name: "Skills",
   components: {
-    ProgressSkill,
+    ProgressSkill: () => import("@/components/skills/ProgressSkill"),
   },
   data() {
     return {
@@ -58,6 +56,7 @@ export default {
         "microsoft-visual-studio-code",
         "google-ads",
         "wordpress",
+        "sass",
       ],
     };
   },
@@ -65,28 +64,23 @@ export default {
 </script>
 
 <style scoped>
-.bg {
+.background-color {
   background-image: linear-gradient(to top, snow, snow, #2c3e50);
-}
-h3 {
-  color: #1f3828;
-  font-size: 2em;
-}
-h2 {
   color: #1f3038;
-  font-size: 3em;
-}
-.text {
-  display: block;
 }
 .offsetTop {
-  margin-top: 100px;
+  margin-top: 120px;
 }
 .margin {
   margin: 8vh auto auto auto;
 }
 .icon {
   margin: 1em auto;
+  filter: opacity(0.4);
+}
+.icon:hover {
+  filter: opacity(1);
+  transform: scale(1.1);
 }
 .iconFlex {
   width: 45%;
@@ -94,6 +88,10 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  align-content: space-evenly;
+  align-content: space-between;
+}
+
+button {
+  width: 100px;
 }
 </style>

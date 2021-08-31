@@ -1,24 +1,24 @@
 <template>
   <div id="app">
     <NavBar class="menu"></NavBar>
-    <full-page :options="options" id="fullpage">
-<!--      SECTION HOME-->
+    <full-page :options="options" id="fullpage" ref="fullpage">
+      <!--      SECTION HOME-->
       <div class="section">
         <IntroPage id="home"></IntroPage>
       </div>
-<!--      SECTION ABOUT-->
+      <!--      SECTION ABOUT-->
       <div class="section" id="section3">
-          <About id="about"></About>
+        <About id="about"></About>
       </div>
-<!--     SECTION SKILLS -->
+      <!--     SECTION SKILLS -->
       <div class="section">
         <Skills id="skills"></Skills>
       </div>
-<!--      SECTION EDUCATION-->
+      <!--      SECTION EDUCATION-->
       <div class="section">
         <Education id="education"></Education>
       </div>
-<!--      SECTION EXPERIENCE-->
+      <!--      SECTION EXPERIENCE-->
       <div class="section">
         <Experience id="experience"></Experience>
       </div>
@@ -48,13 +48,7 @@ export default {
         slidesNavigation: true,
         navigation: true,
         scrollBar: false,
-        anchors: [
-          "slide1",
-          "slide2",
-          "slide3",
-          "slide4",
-          "slide5"
-        ],
+        anchors: ["slide1", "slide2", "slide3", "slide4", "slide5"],
       },
     };
   },
@@ -66,7 +60,7 @@ export default {
 @import "../src/assets/css/global.css";
 @import "../src/assets/css/fullpage.css";
 @import "../src/assets/css/vuetyper.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 #app {
   font-family: "Geogrotesque Stencil B Bd", cursive, "sans-serif";
@@ -90,5 +84,4 @@ export default {
     color: snow;
   }
 }
-
 </style>

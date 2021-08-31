@@ -1,8 +1,10 @@
 <template>
-  <div class="viewContainer about">
-    <div class="cont">
-      <div class="fullWidth">
-        <h3 id="fromLeft" class="title underline-dots">keep it simple, life is fast</h3>
+  <div class="flex-container section-color">
+    <div class="inner-container">
+      <div class="full-width">
+        <h3 id="fromLeft" class="title underline-dots">
+          keep it simple, life is fast
+        </h3>
         <vue-typer
           class="vueTyper"
           :typeDelay="40"
@@ -52,18 +54,12 @@ export default {
 </script>
 
 <style scoped>
-.about {
+.section-color {
   background-color: #2c3e50;
   color: snow;
 }
 .section1 {
   display: flex;
-  margin-top: 10vh;
-}
-#fromLeft {
-  left: -130%;
-}
-.fullWidth {
-  width: 100%;
+  margin-top: 10%;
 }
 </style>

@@ -18,7 +18,7 @@ import Progress from "easy-circular-progress/src/index.vue";
 export default {
   name: "SoftSkills",
   components: {
-    Progress
+    Progress,
   },
   data() {
     return {
@@ -54,6 +54,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

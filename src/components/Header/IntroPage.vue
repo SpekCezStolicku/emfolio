@@ -1,9 +1,10 @@
 <template>
-  <div class="animeBg">
-    <v-vanta class="pos" effect="waves" :options="options"> </v-vanta>
-    <div class="card1">
-      <h1 class="transitionText">
-        Hello there, <br />
+  <div class="anime-container-background">
+    <v-vanta class="position-initial" effect="waves" :options="options">
+    </v-vanta>
+    <div class="center-card">
+      <h1 class="transition-text">
+        Hello friend, <br />
         my name is Martin
       </h1>
       <h3 class="subtitle">frontend developer and graphic designer</h3>
@@ -17,7 +18,7 @@ import gsap from "gsap";
 export default {
   name: "IntroPage",
   components: {
-    VVanta
+    VVanta,
   },
   data() {
     return {
@@ -41,7 +42,7 @@ export default {
     },
   },
   mounted() {
-    gsap.from(".transitionText", {
+    gsap.from(".transition-text", {
       duration: 2,
       opacity: 0,
       x: -1000,
@@ -65,34 +66,30 @@ export default {
 </script>
 
 <style scoped>
-.animeBg {
+.anime-container-background {
   width: 100%;
-  overflow: hidden;
   height: 100%;
   z-index: -2;
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
 }
 h1 {
-  width: 100%;
-  height: auto;
-  text-align: center;
   color: snow;
   text-transform: uppercase;
   font-size: 4em;
 }
-.pos {
+.position-initial {
   position: initial;
-  width: 100%;
   z-index: -1;
+  width: 100%;
   height: 100%;
 }
 h3 {
   color: burlywood;
   font-weight: normal;
   font-size: 1.85em;
-  text-align: center;
   overflow: hidden;
   width: 0;
   white-space: nowrap;
@@ -110,7 +107,7 @@ h3 {
     filter: blur(0px);
   }
 }
-.transitionText {
+.transition-text {
   color: transparent;
   background-image: linear-gradient(to left, white, burlywood);
   -webkit-background-clip: text;
@@ -129,11 +126,7 @@ h3 {
     background-position: 0 100%;
   }
 }
-span {
-  color: snow;
-  filter: blur(0);
-}
-.card1 {
+.center-card {
   position: absolute;
 }
 </style>

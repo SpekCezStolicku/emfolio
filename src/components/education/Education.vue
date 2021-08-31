@@ -1,9 +1,9 @@
 <template>
-  <div class="viewContainer color">
-    <div class="d-block">
+  <div class="flex-container background-color">
+    <div>
       <h1 class="title">Education</h1>
       <Motto></Motto>
-      <div class="flex">
+      <div class="flex-card">
         <div
           v-for="(time, index) in timelineItems.slice().reverse()"
           :key="index"
@@ -57,19 +57,15 @@ export default {
 </script>
 
 <style scoped>
-.color {
+.background-color {
   background: #1f3828;
   color: snow;
-  font-weight: normal;
 }
-.flex {
+.flex-card {
   display: flex;
   margin: 6%;
   padding: 0;
   justify-content: center;
-}
-p {
-  font-size: 1.4em;
 }
 .timeline {
   width: 30%;
@@ -77,20 +73,26 @@ p {
 }
 .numbers {
   color: burlywood;
-  width: 1.5em;
+  width: 1.4em;
   border: burlywood solid 2px;
   border-radius: 50%;
   margin: 1% 5%;
 }
 .border-bottom {
-  border-bottom: dotted 8px burlywood;
+  border-bottom: dotted 10px burlywood;
 }
 .border-center {
-  border-top: dotted 8px burlywood;
-  border-left: dotted 8px burlywood;
-  border-right: dotted 8px burlywood;
+  border-top: dotted 10px burlywood;
+  border-left: dotted 10px burlywood;
+  border-right: dotted 10px burlywood;
 }
 .title {
   margin: 1em;
+}
+h3 {
+  font-size: 1.8em;
+}
+p {
+  font-size: 1.3em;
 }
 </style>

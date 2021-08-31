@@ -8,7 +8,7 @@
         :strokeWidth="15"
         :value="prog.value"
       />
-      <h3 :style="{ color: prog.color }">{{ prog.name }}</h3>
+      <h2 :style="{ color: prog.color }">{{ prog.name }}</h2>
     </div>
   </div>
 </template>
