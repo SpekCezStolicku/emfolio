@@ -1,16 +1,16 @@
 <template>
   <div class="flex-container background-color">
     <div class="inner-container">
-      <h3 class="title">programming skills</h3>
-      <p>
+      <h3 id="fromRight" class="title">programming skills</h3>
+      <p id="opacity">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non
         risus ac leo posuere tincidunt non non massa. Nulla massa nibh,
         elementum quis lacinia
       </p>
       <div class="margin">
-        <ProgressSkill></ProgressSkill>
+        <ProgressSkill id="fromBottom-1"></ProgressSkill>
       </div>
-      <div class="offsetTop">
+      <div id="fromBottom-2" class="offsetTop">
         <p>...and familiar with</p>
         <div class="iconFlex">
           <mdicon
@@ -19,7 +19,7 @@
             v-for="icon in icons"
             :key="icon"
             :name="icon"
-          />
+          >{{ icon }} </mdicon>
         </div>
       </div>
     </div>

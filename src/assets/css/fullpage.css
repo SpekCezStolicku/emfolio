@@ -8,6 +8,7 @@ div.fp-controlArrow.fp-next {
     left: auto;
     right: 70px;
 }
+
 div.fp-controlArrow.fp-prev {
     width: 40px;
     height: 40px;
@@ -22,10 +23,12 @@ div.fp-controlArrow.fp-next:hover {
     animation: skewNext 0.8s infinite;
     animation-direction: alternate;
 }
+
 div.fp-controlArrow.fp-prev:hover {
     animation: skewPrev 0.8s infinite;
     animation-direction: alternate;
 }
+
 @keyframes skewNext {
     0% {
         transform: rotate(-45deg) scale(1);
@@ -34,6 +37,7 @@ div.fp-controlArrow.fp-prev:hover {
         transform: rotate(-45deg) scale(1.2);
     }
 }
+
 @keyframes skewPrev {
     0% {
         transform: rotate(-225deg) scale(1);
@@ -46,10 +50,54 @@ div.fp-controlArrow.fp-prev:hover {
 /*AFTER LOAD AMINATIONS*/
 .fp-viewing-slide2 #fromLeft {
     left: 0;
-    position:relative;
+    position: relative;
     transition: all 1s ease-in-out;
-    transition-delay: .2s;
+    transition-delay: .1s;
 }
+
 #fromLeft {
     left: -130%;
+}
+
+#fromRight {
+    right: -130%;
+}
+
+.fp-viewing-slide3 #opacity {
+    opacity: 1;
+    transition: all 1s ease-in-out;
+    transition-delay: .5s;
+}
+
+#opacity {
+    opacity: 0;
+}
+
+.fp-viewing-slide3 #fromRight {
+    right: 0;
+    position: relative;
+    transition: all 1s ease-in-out;
+    transition-delay: .1s;
+}
+
+.fp-viewing-slide3 #fromBottom-1 {
+    opacity: 1;
+    position: relative;
+    transition: all 1s ease-in-out;
+    transition-delay: .8s;
+}
+
+#fromBottom-1 {
+    opacity: 0;
+}
+
+.fp-viewing-slide3 #fromBottom-2 {
+    position: relative;
+    bottom: 0;
+    transition: all 1s ease-in-out;
+    transition-delay: 1s;
+}
+
+#fromBottom-2 {
+    bottom: -3000px;
 }
