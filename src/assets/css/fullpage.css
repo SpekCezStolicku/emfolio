@@ -1,7 +1,7 @@
 div.fp-controlArrow.fp-next {
     width: 40px;
     height: 40px;
-    border: 3px solid burlywood;
+    border: 3px solid #1f3038;
     border-left: 0;
     border-top: 0;
     transform: rotate(-45deg);
@@ -12,7 +12,7 @@ div.fp-controlArrow.fp-next {
 div.fp-controlArrow.fp-prev {
     width: 40px;
     height: 40px;
-    border: 3px solid burlywood;
+    border: 3px solid #1f3038;
     border-left: 0;
     border-top: 0;
     transform: rotate(-225deg);
@@ -47,12 +47,38 @@ div.fp-controlArrow.fp-prev:hover {
     }
 }
 
-/*AFTER LOAD AMINATIONS*/
+/*NAVBAR PANEL ACTIVE LINK COLOR FIX*/
+.fp-viewing-slide3-0 a:nth-child(3) {
+    color: burlywood;
+}
+
+.fp-viewing-slide3-1 a:nth-child(3) {
+    color: burlywood;
+}
+
+/*NAVIGATION DOTS FIX*/
+.fp-viewing-slide2 #fp-nav ul li a span {
+    background: snow;
+}
+
+.fp-viewing-slide1 #fp-nav ul li a span {
+    background: burlywood;
+}
+
+.fp-viewing-slide4 #fp-nav ul li a span {
+    background: snow;
+}
+
+.fp-viewing-slide5 #fp-nav ul li a span {
+    background: burlywood;
+}
+
+/*AFTER LOAD ANIMATIONS*/
 .fp-viewing-slide2 #fromLeft {
     left: 0;
     position: relative;
     transition: all 1s ease-in-out;
-    transition-delay: .1s;
+    transition-delay: 0.1s;
 }
 
 #fromLeft {
@@ -60,38 +86,38 @@ div.fp-controlArrow.fp-prev:hover {
 }
 
 #fromRight {
-    right: -130%;
+    right: -250%;
 }
 
-.fp-viewing-slide3 #opacity {
+.fp-viewing-slide3-0 #opacity {
     opacity: 1;
     transition: all 1s ease-in-out;
-    transition-delay: .5s;
+    transition-delay: 0.5s;
 }
 
 #opacity {
     opacity: 0;
 }
 
-.fp-viewing-slide3 #fromRight {
+.fp-viewing-slide3-0 #fromRight {
     right: 0;
     position: relative;
     transition: all 1s ease-in-out;
-    transition-delay: .1s;
+    transition-delay: 0.1s;
 }
 
-.fp-viewing-slide3 #fromBottom-1 {
+.fp-viewing-slide3-0 #fromBottom-1 {
     opacity: 1;
     position: relative;
     transition: all 1s ease-in-out;
-    transition-delay: .8s;
+    transition-delay: 0.8s;
 }
 
 #fromBottom-1 {
     opacity: 0;
 }
 
-.fp-viewing-slide3 #fromBottom-2 {
+.fp-viewing-slide3-0 #fromBottom-2 {
     position: relative;
     bottom: 0;
     transition: all 1s ease-in-out;

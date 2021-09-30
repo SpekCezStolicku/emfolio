@@ -1,10 +1,10 @@
 <template>
   <div class="navBanner">
     <a
-      class="gsapAnime"
       v-for="(anchor, index) in anchors"
       :key="index"
       :href="'#slide' + countIndex(index)"
+      class="gsapAnime"
       @click="animeNav"
       >{{ anchor }}</a
     >
@@ -53,7 +53,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 a {
   position: relative;
   cursor: pointer;
@@ -65,6 +65,7 @@ a {
   text-decoration: none;
   z-index: 1002;
 }
+
 a:hover {
   content: attr(data-text);
   color: burlywood;
@@ -79,6 +80,7 @@ a:hover {
   transform: translate(-50%);
   z-index: 1000;
 }
+
 .border-top {
   position: relative;
 }
@@ -100,6 +102,12 @@ a:hover {
   }
   100% {
     width: 100%;
+  }
+}
+
+@for $i from 1 through 5 {
+  .fp-viewing-slide#{$i} a:nth-child(#{$i}) {
+    color: burlywood;
   }
 }
 </style>

@@ -1,18 +1,23 @@
 <template>
   <div id="app">
     <NavBar class="menu"></NavBar>
-    <full-page :options="options" id="fullpage" ref="fullpage">
+    <full-page id="fullpage" ref="fullpage" :options="options">
       <!--      SECTION HOME-->
       <div class="section">
         <IntroPage id="home"></IntroPage>
       </div>
       <!--      SECTION ABOUT-->
-      <div class="section" id="section3">
+      <div id="section3" class="section">
         <About id="about"></About>
       </div>
       <!--     SECTION SKILLS -->
       <div class="section">
-        <Skills id="skills"></Skills>
+        <div class="slide">
+          <Skills id="skills"></Skills>
+        </div>
+        <div class="slide">
+          <SoftSkills></SoftSkills>
+        </div>
       </div>
       <!--      SECTION EDUCATION-->
       <div class="section">
@@ -33,6 +38,8 @@ import Skills from "@/components/skills/Skills";
 import Education from "@/components/education/Education";
 import NavBar from "@/components/Header/NavBar";
 import Experience from "@/components/experience/Experience";
+import SoftSkills from "@/components/skills/SoftSkills";
+
 export default {
   components: {
     Experience,
@@ -41,6 +48,7 @@ export default {
     Skills,
     Education,
     NavBar,
+    SoftSkills,
   },
   data() {
     return {
@@ -69,6 +77,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
 #nav {
   padding: 30px;
 
@@ -80,6 +89,7 @@ export default {
       color: snow;
     }
   }
+
   a:hover {
     color: snow;
   }

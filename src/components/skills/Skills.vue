@@ -14,12 +14,13 @@
         <p>...and familiar with</p>
         <div class="iconFlex">
           <mdicon
-            class="icon"
-            size="4em"
             v-for="icon in icons"
             :key="icon"
             :name="icon"
-          >{{ icon }} </mdicon>
+            class="icon"
+            size="4em"
+            >{{ icon }}
+          </mdicon>
         </div>
       </div>
     </div>
@@ -27,10 +28,12 @@
 </template>
 
 <script>
+import ProgressSkill from "@/components/skills/ProgressSkill";
+
 export default {
   name: "Skills",
   components: {
-    ProgressSkill: () => import("@/components/skills/ProgressSkill"),
+    ProgressSkill,
   },
   data() {
     return {
@@ -68,20 +71,25 @@ export default {
   background-image: linear-gradient(to top, snow, snow, #2c3e50);
   color: #1f3038;
 }
+
 .offsetTop {
   margin-top: 120px;
 }
+
 .margin {
   margin: 8vh auto auto auto;
 }
+
 .icon {
   margin: 1em auto;
   filter: opacity(0.4);
 }
+
 .icon:hover {
   filter: opacity(1);
   transform: scale(1.1);
 }
+
 .iconFlex {
   width: 45%;
   margin: auto;

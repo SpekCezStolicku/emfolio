@@ -6,14 +6,15 @@
           keep it simple, life is fast
         </h3>
         <vue-typer
-          class="vueTyper"
-          :typeDelay="40"
+          :key="reload"
           :repeat="0"
+          :typeDelay="20"
+          class="vueTyper"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse"
         ></vue-typer>
         <div class="section1 intro space-between">
           <div v-for="card in personalCard" :key="card.id">
-            <mdicon size="4em" :name="card.icon" />
+            <mdicon :name="card.icon" size="4em" />
             <h3>{{ card.title }}</h3>
             <p>{{ card.text }}</p>
           </div>
@@ -28,28 +29,34 @@ export default {
   name: "About",
   data() {
     return {
+      reload: 0,
       personalCard: [
         {
           id: "1",
           icon: "brain",
           title: "mindset",
-          text: "#curious #creative #openness",
+          text: "#curious #creative #openness"
         },
         {
           id: "2",
           icon: "alert-circle-outline",
           title: "stress",
-          text: "#avoider #supportive #analytical",
+          text: "#avoider #supportive #analytical"
         },
         {
           id: "3",
           icon: "heart-outline",
           title: "nature",
-          text: "#extrovert #optimist #tolerant",
-        },
-      ],
+          text: "#extrovert #optimist #tolerant"
+        }
+      ]
     };
   },
+  methods: {
+    forceRerender() {
+      this.componentKey += 1;
+    }
+  }
 };
 </script>
 
@@ -58,6 +65,7 @@ export default {
   background-color: #2c3e50;
   color: snow;
 }
+
 .section1 {
   display: flex;
   margin-top: 10%;
