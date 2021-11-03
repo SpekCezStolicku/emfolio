@@ -18,6 +18,7 @@ import gsap from "gsap";
 
 export default {
   name: "NavBar",
+
   computed: {
     ...mapState(["anchors"]),
   },
@@ -39,11 +40,11 @@ export default {
       gsap.fromTo(
         ".navBanner",
         {
-          duration: 1,
+          duration: 0.5,
           y: -100,
         },
         {
-          duration: 1,
+          duration: 0.5,
           delay: 0.5,
           y: 0,
         }
@@ -105,9 +106,17 @@ a:hover {
   }
 }
 
-@for $i from 1 through 5 {
+@for $i from 1 through 8 {
   .fp-viewing-slide#{$i} a:nth-child(#{$i}) {
     color: burlywood;
+  }
+}
+p {
+  color: white;
+}
+@media screen and (max-width: 1400px) {
+  a {
+    font-size: 1.1em;
   }
 }
 </style>

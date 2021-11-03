@@ -3,39 +3,27 @@
     <div class="inner-container">
       <h3 id="fromRight" class="title">software skills</h3>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non
-        risus ac leo posuere tincidunt non non massa. Nulla massa nibh,
-        elementum quis lacinia
+        Reduce image size without changing quality, drawing in vectors,
+        thumbnails, favicons, animations. Ye, a must have package for frontend
+        programmer. As a bonus, I like to draw 3d objects, blueprints, circuit
+        diagrams.
       </p>
-      <div class="margin">
-        <div class="space-between">
-          <div v-for="(prog1, index) in softSkills" :key="index">
-            <Progress
-              :radius="60"
-              :stroke-color="prog1.color"
-              :strokeWidth="15"
-              :transitionDuration="2000"
-              :value="prog1.value"
-            />
-            <h4 :style="{ color: prog1.color }">{{ prog1.name }}</h4>
-          </div>
-        </div>
-      </div>
+      <ProgressSkill :progress="progress" />
     </div>
   </div>
 </template>
 
 <script>
-import Progress from "easy-circular-progress/src/index.vue";
+import ProgressSkill from "@/components/skills/ProgressSkill";
 
 export default {
   name: "SoftSkills",
   components: {
-    Progress,
+    ProgressSkill,
   },
   data() {
     return {
-      softSkills: [
+      progress: [
         {
           name: "Adobe Illustrator",
           color: "#2C3E50",
@@ -107,5 +95,8 @@ h4 {
 
 button {
   width: 100px;
+}
+p {
+  margin-bottom: 2em;
 }
 </style>

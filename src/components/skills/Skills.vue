@@ -3,12 +3,14 @@
     <div class="inner-container">
       <h3 id="fromRight" class="title">programming skills</h3>
       <p id="opacity">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse non
-        risus ac leo posuere tincidunt non non massa. Nulla massa nibh,
-        elementum quis lacinia
+        Programming is a skill best acquired by practice and example rather than
+        from books. Alan Turing once said. I've been using this method for a few
+        years to skill. Primary interests are vue, nuxt, vite, node.js, css
+        preprocessors and of course html. My personal goal is to raise every
+        single skill to 100%
       </p>
       <div class="margin">
-        <ProgressSkill id="fromBottom-1"></ProgressSkill>
+        <ProgressSkill :progress="progress" />
       </div>
       <div id="fromBottom-2" class="offsetTop">
         <p>...and familiar with</p>
@@ -37,6 +39,38 @@ export default {
   },
   data() {
     return {
+      progress: [
+        {
+          name: "html",
+          color: "#2C3E50",
+          value: "95",
+        },
+        {
+          name: "css/scss",
+          color: "#1f3828",
+          value: "85",
+        },
+        {
+          name: "js/vue",
+          color: "#1f3038",
+          value: "60",
+        },
+        {
+          name: "php",
+          color: "#2c5039",
+          value: "35",
+        },
+        {
+          name: "c/c++",
+          color: "#2f3350",
+          value: "45",
+        },
+        {
+          name: "arduino",
+          color: "#1f3828",
+          value: "50",
+        },
+      ],
       icons: [
         "language-html5",
         "language-css3",
@@ -81,7 +115,7 @@ export default {
 }
 
 .icon {
-  margin: 1em auto;
+  margin: 1em 0.8em;
   filter: opacity(0.4);
 }
 
@@ -91,9 +125,10 @@ export default {
 }
 
 .iconFlex {
-  width: 45%;
+  width: 60%;
   margin: auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   align-content: space-between;
@@ -101,5 +136,24 @@ export default {
 
 button {
   width: 100px;
+}
+@media screen and (max-width: 1930px) {
+  .icon {
+    font-size: 0.65em;
+  }
+  .offsetTop {
+    margin-top: 70px;
+  }
+}
+@media screen and (max-width: 1535px) {
+  .icon {
+    font-size: 0.6em;
+  }
+  .offsetTop {
+    margin-top: 60px;
+  }
+  .iconFlex {
+    width: 90%;
+  }
 }
 </style>

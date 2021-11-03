@@ -1,129 +1,189 @@
 div.fp-controlArrow.fp-next {
-    width: 40px;
-    height: 40px;
-    border: 3px solid #1f3038;
-    border-left: 0;
-    border-top: 0;
-    transform: rotate(-45deg);
-    left: auto;
-    right: 70px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(-45deg);
+  left: auto;
+  right: 70px;
 }
 
 div.fp-controlArrow.fp-prev {
-    width: 40px;
-    height: 40px;
-    border: 3px solid #1f3038;
-    border-left: 0;
-    border-top: 0;
-    transform: rotate(-225deg);
-    left: 25px;
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(-225deg);
+  left: 25px;
 }
 
 div.fp-controlArrow.fp-next:hover {
-    animation: skewNext 0.8s infinite;
-    animation-direction: alternate;
+  animation: skewNext 0.8s infinite;
+  animation-direction: alternate;
 }
 
 div.fp-controlArrow.fp-prev:hover {
-    animation: skewPrev 0.8s infinite;
-    animation-direction: alternate;
+  animation: skewPrev 0.8s infinite;
+  animation-direction: alternate;
 }
 
 @keyframes skewNext {
-    0% {
-        transform: rotate(-45deg) scale(1);
-    }
-    100% {
-        transform: rotate(-45deg) scale(1.2);
-    }
+  0% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(1.2);
+  }
 }
 
 @keyframes skewPrev {
-    0% {
-        transform: rotate(-225deg) scale(1);
-    }
-    100% {
-        transform: rotate(-225deg) scale(1.2);
-    }
+  0% {
+    transform: rotate(-225deg) scale(1);
+  }
+  100% {
+    transform: rotate(-225deg) scale(1.2);
+  }
 }
 
 /*NAVBAR PANEL ACTIVE LINK COLOR FIX*/
-.fp-viewing-slide3-0 a:nth-child(3) {
-    color: burlywood;
+.fp-viewing-slide3-0 a:nth-child(3),
+.fp-viewing-slide5-0 a:nth-child(5),
+.fp-viewing-slide5-1 a:nth-child(5) {
+  color: burlywood;
 }
 
 .fp-viewing-slide3-1 a:nth-child(3) {
-    color: burlywood;
+  color: burlywood;
 }
 
 /*NAVIGATION DOTS FIX*/
 .fp-viewing-slide2 #fp-nav ul li a span {
-    background: snow;
+  background: snow;
 }
 
 .fp-viewing-slide1 #fp-nav ul li a span {
-    background: burlywood;
+  background: burlywood;
 }
 
 .fp-viewing-slide4 #fp-nav ul li a span {
-    background: snow;
+  background: snow;
 }
 
-.fp-viewing-slide5 #fp-nav ul li a span {
-    background: burlywood;
+.fp-viewing-slide5-0 #fp-nav ul li a span,
+.fp-viewing-slide5-1 #fp-nav ul li a span {
+  background: burlywood;
+}
+
+.fp-viewing-slide6 #fp-nav ul li a span,
+.fp-viewing-slide7 #fp-nav ul li a span,
+.fp-viewing-slide8 #fp-nav ul li a span {
+  background: snow;
 }
 
 /*AFTER LOAD ANIMATIONS*/
 .fp-viewing-slide2 #fromLeft {
-    left: 0;
-    position: relative;
-    transition: all 1s ease-in-out;
-    transition-delay: 0.1s;
+  left: 0;
+  position: relative;
+  transition: all 1s ease-in-out;
+  transition-delay: 0.1s;
 }
 
 #fromLeft {
-    left: -130%;
+  left: -130%;
 }
 
 #fromRight {
-    right: -250%;
+  right: -250%;
 }
 
 .fp-viewing-slide3-0 #opacity {
-    opacity: 1;
-    transition: all 1s ease-in-out;
-    transition-delay: 0.5s;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+  transition-delay: 0.5s;
 }
 
 #opacity {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fp-viewing-slide3-0 #fromRight {
-    right: 0;
-    position: relative;
-    transition: all 1s ease-in-out;
-    transition-delay: 0.1s;
+  right: 0;
+  position: relative;
+  transition: all 1s ease-in-out;
+  transition-delay: 0.1s;
 }
 
 .fp-viewing-slide3-0 #fromBottom-1 {
-    opacity: 1;
-    position: relative;
-    transition: all 1s ease-in-out;
-    transition-delay: 0.8s;
+  opacity: 1;
+  position: relative;
+  transition: all 1s ease-in-out;
+  transition-delay: 0.8s;
 }
 
 #fromBottom-1 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .fp-viewing-slide3-0 #fromBottom-2 {
-    position: relative;
-    bottom: 0;
-    transition: all 1s ease-in-out;
-    transition-delay: 1s;
+  position: relative;
+  bottom: 0;
+  transition: all 1s ease-in-out;
+  transition-delay: 1s;
 }
 
 #fromBottom-2 {
-    bottom: -3000px;
+  bottom: -3000px;
+}
+.fp-slidesNav ul li a.active span,
+.fp-slidesNav ul li a span,
+.fp-slidesNav ul li:hover a.active span {
+  background: black !important;
+}
+
+.fp-viewing-slide8 #bottom {
+  opacity: 1;
+  position: relative;
+  bottom: 0;
+  transition: all 0.5s ease-in-out 19s;
+}
+#bottom {
+  opacity: 0;
+  bottom: -300px;
+}
+
+.bottom-about,
+.bottom-about-after {
+  opacity: 0;
+  bottom: -1300px;
+}
+.fp-viewing-slide2 .bottom-about {
+  opacity: 1;
+  position: relative;
+  bottom: 0;
+  transition: all 0.5s ease-in-out 7.5s;
+}
+.fp-viewing-slide2 .bottom-about-after {
+  opacity: 1;
+  position: relative;
+  bottom: 0;
+  transition: all 0.5s ease-in-out 8s;
+}
+.bottom-first-5,
+.bottom-second-5 {
+  opacity: 0;
+  bottom: -300px;
+}
+.fp-viewing-slide5-0 .bottom-first-5 {
+  opacity: 1;
+  position: relative;
+  bottom: 0;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+.fp-viewing-slide5-0 .bottom-second-5 {
+  opacity: 1;
+  position: relative;
+  bottom: 0;
+  transition: all 0.5s ease-in-out 0.9s;
 }

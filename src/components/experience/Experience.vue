@@ -1,7 +1,7 @@
 <template>
   <div class="flex-container background-color">
     <div class="inner-container full-width">
-      <h3 class="title">Experiences</h3>
+      <h3 class="title">Experience</h3>
       <Graphic></Graphic>
     </div>
   </div>
@@ -9,6 +9,7 @@
 
 <script>
 import Graphic from "@/components/experience/Graphic";
+
 export default {
   name: "Experience",
   components: {
@@ -19,7 +20,12 @@ export default {
 
 <style scoped>
 .background-color {
-  background: #6b4422;
+  background: #3d3d3d;
+  background-image: url("../../assets/noise.png");
   color: white;
+}
+
+div.fp-controlArrow.fp-next {
+  border: 3px solid burlywood;
 }
 </style>
