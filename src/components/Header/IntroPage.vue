@@ -154,4 +154,12 @@ h3 {
     font-size: 1.7em;
   }
 }
+@media screen and (max-height: 730px) {
+  h1 {
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.2em;
+  }
+}
 </style>

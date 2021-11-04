@@ -173,11 +173,14 @@ export default {
   position: static !important;
   max-width: 100vw;
   max-height: 100vh;
+  height: 100vh !important;
+  width: 100vw !important;
 }
 #silentbox-overlay__embed img,
 #silentbox-overlay__embed iframe {
   position: absolute !important;
   top: 0 !important;
+  width: 100vw !important;
   bottom: auto !important;
 }
 
@@ -201,6 +204,20 @@ export default {
   }
   #fp-nav {
     display: none;
+  }
+}
+@media screen and (max-height: 700px) {
+  .menu {
+    display: none;
+  }
+  #fullpage {
+    display: none;
+  }
+  #fp-nav {
+    display: none;
+  }
+  #small-screen {
+    display: block;
   }
 }
 @media screen and (max-width: 1930px) {

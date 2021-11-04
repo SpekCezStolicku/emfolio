@@ -17,20 +17,19 @@
             :erase-on-complete="true"
             class="vueTyper"
             :text="[
-              `Do you like stories?`,
-              `It doesn't matter, I'll tell you anyway.`,
+              `Do you like the stories?`,
+              `It doesn't matter, I'll tell you one anyway.`,
             ]"
           ></vue-typer>
           <p class="white-text bottom-about">
-            My childhood was quite happy. My parents kept me right after my
-            birth, which was a good precondition for a quality background.
-            Thanks to that, I was able to successfully finish primary school.
-            Why do I even mention it? Because elementary school gave me the best
+            My childhood was quite happy. My parents kept me right after birth,
+            which was a good precondition for a quality background. Thanks to
+            that, I was able to successfully finish primary school. Why do I
+            even mention it? Because elementary school gave me the best
             practical experience. For example, never go to the office alone with
-            the janitor or how to properly hide lunch. Oh ... those nineties.
-            But let's go to the present. Make yourself comfortable and enjoy
-            this presentation from a guy who still doesn't understand
-            Blockchain.
+            the janitor or how to properly hide lunch. Oh... those nineties. But
+            let's go to the present. I'll tell you the rest of the story one
+            day. Now make yourself comfortable and enjoy this presentation.
           </p>
         </div>
         <div class="section1 intro space-between bottom-about-after">
@@ -120,6 +119,9 @@ div {
   }
   .icon {
     font-size: 0.8em;
+  }
+  .inner-container {
+    width: 75%;
   }
 }
 @media screen and (max-width: 1450px) {

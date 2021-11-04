@@ -119,4 +119,9 @@ p {
     font-size: 1.1em;
   }
 }
+@media screen and (max-height: 730px) {
+  a {
+    font-size: 1em;
+  }
+}
 </style>

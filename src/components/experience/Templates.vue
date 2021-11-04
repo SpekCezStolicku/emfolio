@@ -107,6 +107,9 @@ export default {
 .margin-p {
   margin: 0 5em;
 }
+.inner-container {
+  width: 100%;
+}
 
 .level-p-style {
   color: burlywood;
@@ -124,6 +127,9 @@ h3 {
 a {
   color: burlywood;
   text-decoration: none;
+}
+p {
+  padding: 0 10%;
 }
 
 a:visited {

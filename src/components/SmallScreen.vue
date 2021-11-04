@@ -28,8 +28,8 @@ export default {};
 }
 h1 {
   color: snow;
-  font-size: 3em;
-  margin: 1em 0;
+  font-size: 2em;
+  margin: 0.5em 0;
 }
 div {
   min-height: 97.5vh;
@@ -38,10 +38,11 @@ div {
   padding: 1em;
 }
 h3 {
-  margin: 0.5em;
+  font-size: 1.5em;
+  margin: 0.2em;
 }
 p {
   color: snow;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 </style>

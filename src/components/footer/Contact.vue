@@ -11,7 +11,7 @@
         :text="[
           `It seems like we reached the darkest side of this web.`,
           `And now is the time to say goodbye.`,
-          `...no wait! I know you just spent a lot of time for this. And now you feel the same emptiness as if your favorite series is ending.
+          `...no, wait! I know you just spent a lot of time for this. And now you feel the same emptiness as if your favorite series is ending.
            Let's pretend it's true. And I'll offer you one last thing. Deal with it wisely :-)`,
         ]"
         :typeDelay="45"
@@ -186,6 +186,23 @@ a:visited {
   .margin {
     margin: 0.5em;
     font-size: 0.5em;
+  }
+}
+@media screen and (max-height: 730px) {
+  .vueTyper,
+  p {
+    font-size: 1em;
+  }
+  .margin {
+    margin: 0.5em;
+    font-size: 0.5em;
+  }
+  .title {
+    font-size: 2em;
+  }
+  .margin-top,
+  .margin-image {
+    margin-top: 2em;
   }
 }
 </style>
