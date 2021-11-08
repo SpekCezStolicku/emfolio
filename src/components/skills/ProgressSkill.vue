@@ -62,7 +62,7 @@ export default {
       if (this.windowWidth <= 1930) {
         return 45;
       } else if (this.windowWidth <= 1400) {
-        return 35;
+        return 30;
       }
       return 60;
     },

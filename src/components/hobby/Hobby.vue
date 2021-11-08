@@ -49,7 +49,7 @@
           <h3 class="title color-burlywood">The rest</h3>
           <p class="white-text">
             Playing chess? Well. Do you play the guitar? Great. Are you
-            fascinated by rubik's cube? Well, in that case, we're the same.
+            fascinated by Rubik's Cube? Well, in that case, we're the same.
           </p>
           <div class="d-inline-f d-flex wrap">
             <img v-for="rest in restIcons" :key="rest" :src="rest" alt="svg" />
@@ -206,6 +206,27 @@ img {
   img {
     width: 2.2em;
     margin: 0em 2em;
+  }
+}
+@media screen and (max-width: 1190px) {
+  .d-inline-f {
+    margin: 1.8em;
+  }
+  .md-icons {
+    font-size: 0.55em;
+  }
+  .solar-img {
+    width: 2.5em;
+  }
+  img {
+    width: 2em;
+    margin: 0em 1.8em;
+  }
+  .gsapTitle {
+    font-size: 2.5em;
+  }
+  .title {
+    font-size: 1.6em;
   }
 }
 </style>

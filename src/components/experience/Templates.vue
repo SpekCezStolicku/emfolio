@@ -7,16 +7,16 @@
         me introduce. There are some pictures below this text. You may have
         noticed that the web page does not appear when you click on it... See?
       </p>
-      <div class="flex-card wrap">
+      <div class="flex-card wrap" v-if="level1 < 3">
         <silent-box
           :gallery="images"
           class="image-style d-flex bottom-first-5"
         ></silent-box>
       </div>
 
-      <div class="bottom-second-5">
+      <div class="bottom-second-5" v-if="level1 < 3">
         <p class="margin-p">
-          Ok! I know... You want to see atleast one real project deployed on
+          Ok! I know... You want to see at least one real project deployed on
           real internet. Technically, you are just staring at one. But ok. I
           will fulfill your wish. However, let's play the game first. There is a
           link at the end of this topic. This link randomly generate anchor of
@@ -67,25 +67,25 @@ export default {
           src: require("../../assets/exp/templates/coffeeShop.jpg"),
 
           thumbnail: require("../../assets/exp/templates/coffeeShop.jpg"),
-          thumbnailWidth: window.innerWidth / 9,
+          thumbnailWidth: window.innerHeight / 5,
         },
         {
           src: require("../../assets/exp/templates/nclt.jpg"),
 
           thumbnail: require("../../assets/exp/templates/nclt.jpg"),
-          thumbnailWidth: window.innerWidth / 9,
+          thumbnailWidth: window.innerHeight / 5,
         },
         {
           src: require("../../assets/exp/templates/rumana.jpg"),
 
           thumbnail: require("../../assets/exp/templates/rumana.jpg"),
-          thumbnailWidth: window.innerWidth / 9,
+          thumbnailWidth: window.innerHeight / 5,
         },
         {
           src: require("../../assets/exp/templates/TaS.jpg"),
 
           thumbnail: require("../../assets/exp/templates/TaS.jpg"),
-          thumbnailWidth: window.innerWidth / 9,
+          thumbnailWidth: window.innerHeight / 5,
         },
       ],
     };
@@ -114,7 +114,7 @@ export default {
 .level-p-style {
   color: burlywood;
   border-top: burlywood dotted 5px;
-  margin: 3em 0;
+  margin: 3em 6em;
   padding: 1em 0;
   transition: all 0.5s ease-in-out;
 }

@@ -125,10 +125,10 @@ p {
     margin: auto;
   }
   p {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .numbers {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
   .border-bottom {
     border-bottom: dotted 5px burlywood;
@@ -137,6 +137,9 @@ p {
     border-top: dotted 5px burlywood;
     border-left: dotted 5px burlywood;
     border-right: dotted 5px burlywood;
+  }
+  h3 {
+    font-size: 1.2em;
   }
 }
 </style>

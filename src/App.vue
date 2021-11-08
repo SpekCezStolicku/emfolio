@@ -171,17 +171,14 @@ export default {
 }
 #silentbox-overlay {
   position: static !important;
-  max-width: 100vw;
-  max-height: 100vh;
   height: 100vh !important;
   width: 100vw !important;
+  padding-bottom: 8%;
 }
 #silentbox-overlay__embed img,
 #silentbox-overlay__embed iframe {
   position: absolute !important;
-  top: 0 !important;
   width: 100vw !important;
-  bottom: auto !important;
 }
 
 .silentbox-item:hover {
@@ -195,7 +192,7 @@ export default {
     display: none;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 999px) {
   .menu {
     display: none;
   }

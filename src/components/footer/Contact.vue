@@ -173,7 +173,7 @@ a:visited {
     font-size: 1.1em;
   }
   .md-icons {
-    font-size: 0.9em;
+    font-size: 0.75em;
   }
 }
 @media screen and (max-width: 1500px) {
