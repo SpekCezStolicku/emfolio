@@ -10,10 +10,10 @@
     <p>Buy a bigger screen</p>
     <h3 class="color-burlywood">or</h3>
     <p>
-      Send me money as an incentive to finish this project. Or give me a
-      contract. It doesn't matter that you don't know what qualities I have.
-      They are almost perfect. But if you don't believe me, just buy that screen
-      and then send the money. I'll leave the order up to you.
+      Try to accept the fact that the site is fully interactive and needs a
+      mouse to work properly. I am sorry for this limitation. But now go and buy
+      that screen, computer, laptop, whatever. Don't be deprived of this
+      experience. It's worth it. See you on the other side :-)
     </p>
   </div>
 </template>

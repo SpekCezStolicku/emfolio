@@ -162,13 +162,13 @@ div.fp-controlArrow.fp-prev:hover {
   opacity: 1;
   position: relative;
   bottom: 0;
-  transition: all 0.5s ease-in-out 7.5s;
+  transition: all 0.5s ease-in-out 8s;
 }
 .fp-viewing-slide2 .bottom-about-after {
   opacity: 1;
   position: relative;
   bottom: 0;
-  transition: all 0.5s ease-in-out 8s;
+  transition: all 0.5s ease-in-out 8.4s;
 }
 .bottom-first-5,
 .bottom-second-5 {
@@ -179,11 +179,11 @@ div.fp-controlArrow.fp-prev:hover {
   opacity: 1;
   position: relative;
   bottom: 0;
-  transition: all 0.5s ease-in-out 0.5s;
+  transition: all 0.8s ease-in-out 1s;
 }
 .fp-viewing-slide5-0 .bottom-second-5 {
   opacity: 1;
   position: relative;
   bottom: 0;
-  transition: all 0.5s ease-in-out 0.9s;
+  transition: all 0.5s ease-in-out 1s;
 }

@@ -16,36 +16,52 @@ J
       <!--     SECTION SKILLS -->
       <div class="section">
         <div class="slide">
-          <Skills id="skills" />
+          <div>
+            <Skills id="skills" />
+          </div>
         </div>
         <div class="slide">
-          <SoftSkills />
+          <div>
+            <SoftSkills />
+          </div>
         </div>
       </div>
       <!--      SECTION EDUCATION-->
       <div class="section">
-        <Education id="education" />
+        <div>
+          <Education id="education" />
+        </div>
       </div>
       <!--      SECTION EXPERIENCE-->
       <div class="section">
         <div class="slide">
-          <Templates id="templates" />
+          <div>
+            <Templates id="templates" />
+          </div>
         </div>
         <div class="slide">
-          <Experience id="experience" />
+          <div>
+            <Experience id="experience" />
+          </div>
         </div>
       </div>
       <!--      SECTION HOBBY-->
       <div class="section">
-        <Hobby id="hobby" />
+        <div>
+          <Hobby id="hobby" />
+        </div>
       </div>
       <!--      SECTION REFERENCES-->
       <div class="section">
-        <References id="references" />
+        <div>
+          <References id="references" />
+        </div>
       </div>
       <!--      SECTION CONTACT-->
       <div class="section">
-        <Contact id="contact" />
+        <div>
+          <Contact id="contact" />
+        </div>
       </div>
     </full-page>
     <SmallScreen id="small-screen" />
@@ -53,32 +69,23 @@ J
 </template>
 
 <script>
-import About from "@/components/about/About";
 import IntroPage from "@/components/Header/IntroPage";
-import Skills from "@/components/skills/Skills";
-import Education from "@/components/education/Education";
 import NavBar from "@/components/Header/NavBar";
-import Experience from "@/components/experience/Experience";
-import SoftSkills from "@/components/skills/SoftSkills";
-import Hobby from "@/components/hobby/Hobby";
-import References from "@/components/footer/References";
-import Templates from "@/components/experience/Templates";
-import Contact from "@/components/footer/Contact";
 import SmallScreen from "@/components/SmallScreen";
 
 export default {
   components: {
-    Experience,
+    Experience: () => import("../src/components/experience/Experience.vue"),
     IntroPage,
-    About,
-    Skills,
-    Education,
+    About: () => import("../src/components/about/About.vue"),
+    Skills: () => import("../src/components/skills/Skills.vue"),
+    Education: () => import("../src/components/education/Education.vue"),
     NavBar,
-    SoftSkills,
-    Hobby,
-    References,
-    Contact,
-    Templates,
+    SoftSkills: () => import("../src/components/skills/SoftSkills.vue"),
+    Hobby: () => import("../src/components/hobby/Hobby.vue"),
+    References: () => import("../src/components/footer/References.vue"),
+    Contact: () => import("../src/components/footer/Contact.vue"),
+    Templates: () => import("../src/components/experience/Templates.vue"),
     SmallScreen,
   },
   data() {

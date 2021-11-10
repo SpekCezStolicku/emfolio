@@ -7,23 +7,27 @@
         me introduce. There are some pictures below this text. You may have
         noticed that the web page does not appear when you click on it... See?
       </p>
-      <div class="flex-card wrap" v-if="level1 < 3">
+      <div class="flex-card wrap" v-if="level1 < 1">
         <silent-box
           :gallery="images"
           class="image-style d-flex bottom-first-5"
         ></silent-box>
       </div>
 
-      <div class="bottom-second-5" v-if="level1 < 3">
+      <div class="bottom-second-5" v-if="level1 < 1">
         <p class="margin-p">
           Ok! I know... You want to see at least one real project deployed on
           real internet. Technically, you are just staring at one. But ok. I
           will fulfill your wish. However, let's play the game first. There is a
-          link at the end of this topic. This link randomly generate anchor of
+          link at the end of this topic. This link randomly generates anchor of
           each project you found in the pictures above. Very similar to a
           roulette game. How many times should you click to open all projects?
           We will see...
-          <a href="https://nucleit.sk" target="_blank" @click="level1++"
+          <a
+            v-if="level1 < 1"
+            href="https://nucleit.sk"
+            target="_blank"
+            @click="level1++"
             ><br />
             Click me</a
           >
@@ -32,21 +36,38 @@
       <p v-if="level1 === 1" class="level-p-style">
         Did you... really just open the hidden link? You're a nightmare of
         hackers. Luckily for you I am a good person. Don't be shy and click the
-        link again.
+        link again.<a
+          class="link-2"
+          v-if="level1 < 2"
+          href="https://nucleit.sk"
+          target="_blank"
+          @click="level1++"
+          ><br />
+          Click me</a
+        >
       </p>
       <p class="level-p-style" v-if="level1 === 2">
-        Hm... Second in a row. That reminds me old saying:
-        <span>"When you start having a bad luck, there isn't end to it."</span>
-        Nevermind. Keep going, you're on the right track.
+        Hm... again? That's a pity. But it's reminds me old saying: "If I bought
+        a cementery people would stop dying" Don't worry, it won't be your case.
+        Go ahead and open the link again.
+        <a
+          class="link-2"
+          v-if="level1 === 2"
+          href="https://nucleit.sk"
+          target="_blank"
+          @click="level1++"
+          ><br />
+          Click me</a
+        >
       </p>
       <p class="level-p-style" v-if="level1 >= 3">
-        I have to admit, playing with you is fun. Atleast for me. Now you surely
-        know that link is static. Sorry for that. As an excuse, I offer you this
-        link, where you will find a real game. <br />
+        I have to admit, playing with you is fun. At least for me. Now you
+        surely know that link is static. Sorry for that. As an excuse, I offer
+        you this link, where you will find a real game. <br />
         <button>
           <a
             target="_blank"
-            class="link-2"
+            class="link-2 link-2-2"
             href="https://snake-game-speky.herokuapp.com/"
             >- Enjoy here -</a
           >
@@ -62,6 +83,7 @@ export default {
   data() {
     return {
       level1: 0,
+      windowHeight: window.innerWidth,
       images: [
         {
           src: require("../../assets/exp/templates/coffeeShop.jpg"),
@@ -90,6 +112,26 @@ export default {
       ],
     };
   },
+  watch: {
+    windowHeight(newHeight, old) {
+      console.log(newHeight, old);
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
+  },
+  methods: {
+    onResize() {
+      this.images.forEach(
+        (item) => (item.thumbnailWidth = window.innerHeight / 5)
+      );
+    },
+  },
 };
 </script>
 
@@ -113,9 +155,9 @@ export default {
 
 .level-p-style {
   color: burlywood;
-  border-top: burlywood dotted 5px;
-  margin: 3em 6em;
-  padding: 1em 0;
+  border: burlywood dotted 5px;
+  margin: 3em 7em;
+  padding: 1em;
   transition: all 0.5s ease-in-out;
 }
 
@@ -127,9 +169,10 @@ h3 {
 a {
   color: burlywood;
   text-decoration: none;
+  margin-top: 0.4em;
 }
 p {
-  padding: 0 10%;
+  padding: 0 11%;
 }
 
 a:visited {
@@ -143,7 +186,10 @@ button {
 .link-2 {
   color: snow !important;
   margin: 2em 0;
-  font-size: 1.5em;
+  font-size: 1em;
+}
+.link-2-2 {
+  font-size: 1.7em !important;
 }
 .d-flex {
   align-content: center !important;
