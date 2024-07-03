@@ -65,11 +65,11 @@ export default {
         },
         {
           icon: "cellphone",
-          text: "0950 898 052",
+          text: "0907 629 488",
         },
         {
           icon: "at",
-          text: "mozucha@nucleit.sk",
+          text: "martin.mozucha@gmail.com",
         },
         {
           icon: "whatsapp",
@@ -80,10 +80,6 @@ export default {
         {
           icon: "github",
           url: "https://github.com/SpekCezStolicku",
-        },
-        {
-          icon: "linkedin",
-          url: "",
         },
         {
           icon: "gmail",

@@ -1,7 +1,6 @@
 <template>
   <div class="anime-container-background">
-    <v-vanta :options="options" class="position-initial" effect="waves">
-    </v-vanta>
+    <div class="vanta" ref="vantaElement"></div>
     <div class="center-card">
       <h1 class="transition-text">
         Hello friend, <br />
@@ -13,36 +12,55 @@
 </template>
 
 <script>
-import VVanta from "vue-vanta";
+import * as THREE from "three";
+import WAVES from "vanta/dist/vanta.halo.min";
 import gsap from "gsap";
 
 export default {
   name: "IntroPage",
-  components: {
-    VVanta,
-  },
   data() {
     return {
+      vantaEffect: null,
       options: {
         mouseControls: true,
-        touchControls: true,
-        color: 0x4040e,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        shininess: 40,
-        waveHeight: 40,
-        waveSpeed: 0.3,
-        zoom: 1.2,
+        touchControls: false,
+        gyroControls: false,
+        minHeight: 200.0,
+        minWidth: 200.0,
+        baseColor: 0x294690,
+        backgroundColor: 0x0,
+        amplitudeFactor: 0.8,
+        xOffset: -0.26,
+        size: 0.5,
       },
     };
   },
   methods: {
+    setVanta() {
+      console.log("Initializing Vanta...");
+      try {
+        if (this.$refs.vantaElement || !this.vantaEffect) {
+          this.vantaEffect = WAVES({
+            el: this.$refs.vantaElement,
+            THREE,
+            ...this.options,
+            onRender: () => console.log("Vanta is rendering..."),
+          });
+        }
+      } catch (error) {
+        console.error("Error initializing Vanta:", error);
+      }
+    },
     updateSize() {
       this.options.minHeight = window.innerHeight;
       this.options.minWidth = window.innerWidth;
+      if (this.vantaEffect) {
+        this.vantaEffect.resize();
+      }
     },
   },
   mounted() {
+    this.setVanta();
     gsap.from(".transition-text", {
       duration: 2,
       opacity: 0,
@@ -51,17 +69,9 @@ export default {
     });
     window.addEventListener("resize", this.updateSize);
   },
-  beforeDestroy: function () {
+  beforeDestroy() {
+    if (this.vantaEffect) this.vantaEffect.destroy();
     window.removeEventListener("resize", this.updateSize);
-  },
-  beforeMount() {
-    this.updateSize();
-  },
-  updated() {
-    window.removeEventListener("resize", this.updateSize);
-  },
-  beforeUpdate() {
-    window.addEventListener("resize", this.updateSize);
   },
 };
 </script>
@@ -83,15 +93,15 @@ h1 {
   font-size: 4em;
 }
 
-.position-initial {
-  position: initial;
-  z-index: -1;
+.vanta {
+  position: absolute;
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 h3 {
-  color: burlywood;
+  color: #deb887;
   font-weight: normal;
   font-size: 1.85em;
   overflow: hidden;

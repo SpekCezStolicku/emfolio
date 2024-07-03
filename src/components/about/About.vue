@@ -28,8 +28,8 @@
             even mention it? Because elementary school gave me the best
             practical experience. For example, never go to the office alone with
             the janitor or how to properly hide lunch. Oh... those nineties. But
-            let's go to the present. I'll tell you the rest of the story one
-            day. Now make yourself comfortable and enjoy this presentation.
+            let's go to the present. Make yourself comfortable and enjoy my
+            story.
           </p>
         </div>
         <div class="section1 intro space-between bottom-about-after">

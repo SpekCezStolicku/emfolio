@@ -32,7 +32,7 @@ export default {
       timelineItems: [
         {
           from: "3",
-          title: "University, (2017 --> present)",
+          title: "University, (2017 --> 2020)",
           description:
             "Private University of information technology in Bratislava. Field of study is Cyber security. ",
           style: "border-bottom",

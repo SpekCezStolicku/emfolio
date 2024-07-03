@@ -9,9 +9,6 @@ import "fullpage.js/vendors/scrolloverflow";
 import "fullpage.js/dist/fullpage.css";
 import "animate.css";
 import VueTyperPlugin from "vue-typer";
-import VueSilentbox from "vue-silentbox";
-
-Vue.use(VueSilentbox);
 Vue.use(VueTyperPlugin);
 Vue.use(VueFullPage);
 

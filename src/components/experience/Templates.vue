@@ -2,77 +2,23 @@
   <div class="flex-container background-color">
     <div class="inner-container full-width">
       <h3 class="title">Coding journey</h3>
-      <p v-if="level1 < 1">
-        Oh ye, finally! The serious part ahead. I really love this part, so let
-        me introduce. There are some pictures below this text. You may have
-        noticed that the web page does not appear when you click on it... See?
-      </p>
-      <div class="flex-card wrap" v-if="level1 < 1">
-        <silent-box
-          :gallery="images"
-          class="image-style d-flex bottom-first-5"
-        ></silent-box>
-      </div>
-
-      <div class="bottom-second-5" v-if="level1 < 1">
-        <p class="margin-p">
-          Ok! I know... You want to see at least one real project deployed on
-          real internet. Technically, you are just staring at one. But ok. I
-          will fulfill your wish. However, let's play the game first. There is a
-          link at the end of this topic. This link randomly generates anchor of
-          each project you found in the pictures above. Very similar to a
-          roulette game. How many times should you click to open all projects?
-          We will see...
-          <a
-            v-if="level1 < 1"
-            href="https://nucleit.sk"
-            target="_blank"
-            @click="level1++"
-            ><br />
-            Click me</a
+      <div>
+        <p>
+          I will be serious for a moment because a bit of seriousness doesn’t
+          hurt. I have primarily been developing in Vue.js and Nuxt.js with
+          TypeScript since 2019. I have worked on various large and small
+          projects where I have regularly improved my skills in:
+        </p>
+        <ul>
+          <li v-for="item in skills" :key="item.index">{{ item }}</li>
+        </ul>
+        <p>
+          Check out my latest project
+          <a target="_blank" href="https://spekcezstolicku.github.io/snakeGame/"
+            >-here-</a
           >
         </p>
       </div>
-      <p v-if="level1 === 1" class="level-p-style">
-        Did you... really just open the hidden link? You're a nightmare of
-        hackers. Luckily for you I am a good person. Don't be shy and click the
-        link again.<a
-          class="link-2"
-          v-if="level1 < 2"
-          href="https://nucleit.sk"
-          target="_blank"
-          @click="level1++"
-          ><br />
-          Click me</a
-        >
-      </p>
-      <p class="level-p-style" v-if="level1 === 2">
-        Hm... again? That's a pity. But it's reminds me old saying: "If I bought
-        a cementery people would stop dying" Don't worry, it won't be your case.
-        Go ahead and open the link again.
-        <a
-          class="link-2"
-          v-if="level1 === 2"
-          href="https://nucleit.sk"
-          target="_blank"
-          @click="level1++"
-          ><br />
-          Click me</a
-        >
-      </p>
-      <p class="level-p-style" v-if="level1 >= 3">
-        I have to admit, playing with you is fun. At least for me. Now you
-        surely know that link is static. Sorry for that. As an excuse, I offer
-        you this link, where you will find a real game. <br />
-        <button>
-          <a
-            target="_blank"
-            class="link-2 link-2-2"
-            href="https://snake-game-speky.herokuapp.com/"
-            >- Enjoy here -</a
-          >
-        </button>
-      </p>
     </div>
   </div>
 </template>
@@ -82,34 +28,15 @@ export default {
   name: "Templates",
   data() {
     return {
+      skills: [
+        "Project setup, configuration, testing, version control using Docker, Git, GitLab, GitHub,...",
+        "In-depth speed and SEO optimizations on both the server side and client side",
+        "Code sustainability, reviews, documentation, e2e and unit testing, project migrations",
+        "Creating custom npm libraries",
+        "Deploying projects to production on both static and dynamic servers",
+      ],
       level1: 0,
       windowHeight: window.innerWidth,
-      images: [
-        {
-          src: require("../../assets/exp/templates/coffeeShop.jpg"),
-
-          thumbnail: require("../../assets/exp/templates/coffeeShop.jpg"),
-          thumbnailWidth: window.innerHeight / 5,
-        },
-        {
-          src: require("../../assets/exp/templates/nclt.jpg"),
-
-          thumbnail: require("../../assets/exp/templates/nclt.jpg"),
-          thumbnailWidth: window.innerHeight / 5,
-        },
-        {
-          src: require("../../assets/exp/templates/rumana.jpg"),
-
-          thumbnail: require("../../assets/exp/templates/rumana.jpg"),
-          thumbnailWidth: window.innerHeight / 5,
-        },
-        {
-          src: require("../../assets/exp/templates/TaS.jpg"),
-
-          thumbnail: require("../../assets/exp/templates/TaS.jpg"),
-          thumbnailWidth: window.innerHeight / 5,
-        },
-      ],
     };
   },
   watch: {
@@ -183,6 +110,7 @@ button {
   background: transparent;
   border: none;
 }
+
 .link-2 {
   color: snow !important;
   margin: 2em 0;
@@ -200,5 +128,16 @@ button {
   p {
     font-size: 1em;
   }
+}
+li {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  color: burlywood;
+  font-size: 1.3em;
+  margin: 20px 25%;
+  text-align: start;
+}
+ul {
+  margin: 3em auto;
 }
 </style>

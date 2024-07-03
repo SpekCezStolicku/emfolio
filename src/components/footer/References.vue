@@ -1,7 +1,7 @@
 <template>
   <div class="flex-container section-color">
     <div class="inner-container">
-      <h3 class="title burlywood">Some facts from third-party</h3>
+      <h3 class="title burlywood">Some facts from "third-party"</h3>
       <hooper
         :autoPlay="true"
         :centerMode="true"
@@ -33,11 +33,6 @@ export default {
   data() {
     return {
       mottos: [
-        {
-          expression:
-            "It is scary to think that people like you are allowed to vote.",
-          fromWho: "Anonymous anti-vaxxer",
-        },
         {
           expression: "Your face makes onions cry.",
           fromWho: "Ex-girlfriend",
